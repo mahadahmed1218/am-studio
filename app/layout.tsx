@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import DevPreview from "@/components/DevPreview";
 
 export const metadata: Metadata = {
-  title: "AM Studios — Cinema for Brands",
+  title: "AM Studio",
   description:
     "Cinematic AI production agency for premium brands. Film-quality video campaigns in 48 hours.",
 };
