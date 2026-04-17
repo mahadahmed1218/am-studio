@@ -51,7 +51,7 @@ export default function Navbar() {
                   alt="AM Studios logo"
                   className="h-14 w-14 object-contain"
                 />
-                <span className="font-display font-bold text-[#A8A8A8] text-xl tracking-tight leading-none">
+                <span className="font-display font-bold text-[#808080] text-xl tracking-tight leading-none">
                   AM Studios
                 </span>
               </div>

@@ -23,7 +23,7 @@ export default function Footer() {
                   alt="AM Studios logo"
                   className="h-10 w-10 object-contain"
                 />
-                <span className="font-display font-bold text-[#A8A8A8] text-base tracking-tight">
+                <span className="font-display font-bold text-[#808080] text-base tracking-tight">
                   AM Studios
                 </span>
               </div>
