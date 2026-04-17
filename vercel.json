@@ -1,6 +1,5 @@
 {
-  "buildCommand": "pnpm vite build",
-  "outputDirectory": "dist/public",
-  "installCommand": "pnpm install",
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "framework": "nextjs",
+  "installCommand": "npm install",
+  "buildCommand": "npm run build"
 }
