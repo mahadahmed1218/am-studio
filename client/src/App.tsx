@@ -13,9 +13,11 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Work from "./pages/Work";
+import WorkCategory from "./pages/WorkCategory";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import DevPreview from "./components/DevPreview";
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -33,6 +35,7 @@ function Router() {
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/work" component={Work} />
+        <Route path="/work/:category" component={WorkCategory} />
         <Route path="/services" component={Services} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
@@ -50,6 +53,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <DevPreview />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

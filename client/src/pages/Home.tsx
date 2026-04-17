@@ -5,11 +5,12 @@
  */
 import { useEffect, useRef } from "react";
 import { Link } from "wouter";
-import { ArrowRight, Play, Film, Cpu, Layers } from "lucide-react";
+import { ArrowRight, Film, Cpu, Layers } from "lucide-react";
+import VideoTile from "../components/VideoTile";
+import { PORTFOLIO, HOME_ROW_1, HOME_ROW_2 } from "../data/portfolio";
 
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663549779214/jbDR64QUCbzPJiDzPktCcD/am-studios-hero-bpXEfSwBvANQFEyCVtcmV8.webp";
-const FRAGRANCE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663549779214/jbDR64QUCbzPJiDzPktCcD/am-studios-portfolio-fragrance-dEa6A4RvBLC83TNJT5QLXj.webp";
-const AUTOMOTIVE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663549779214/jbDR64QUCbzPJiDzPktCcD/am-studios-portfolio-automotive-5WPpQTmSSgy9fxBVfZBiZt.webp";
+const HERO_VIDEO = "/hero-video.mp4";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -32,12 +33,19 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#FAF9F7]" ref={revealRef}>
       {/* ─── HERO ─── */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Background Image */}
+      {/* Navbar (h-16 / lg:h-20) is a separate entity above.
+          Mobile: 3:4 aspect ratio below navbar — video cropped from sides.
+          Desktop: fills remaining viewport height below navbar. */}
+      <section className="relative mt-16 lg:mt-20 aspect-[3/4] md:aspect-auto md:min-h-[calc(100vh-4rem)] lg:min-h-[calc(100vh-5rem)] flex items-center overflow-hidden">
+        {/* Background Video */}
         <div className="absolute inset-0 z-0">
-          <img
-            src={HERO_IMG}
-            alt="Cinematic hero"
+          <video
+            src={HERO_VIDEO}
+            poster={HERO_IMG}
+            autoPlay
+            muted
+            loop
+            playsInline
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0D0D0D]/90 via-[#0D0D0D]/60 to-[#0D0D0D]/20" />
@@ -47,26 +55,22 @@ export default function Home() {
         <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#CC0000] z-10" />
         <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-[#CC0000] z-10" />
 
-        {/* Content */}
-        <div className="container relative z-10 pt-24 pb-20">
+        {/* Content — no longer needs large top-padding to clear the navbar */}
+        <div className="container relative z-10 py-8 md:py-12 lg:py-16">
           <div className="max-w-3xl">
-            <div className="section-label mb-6">
-              Cinematic AI Production
-            </div>
-
-            <h1 className="font-display text-white text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6">
-              Cinematic AI campaigns for brands that{" "}
-              <em className="text-[#CC0000] not-italic">refuse</em> to look ordinary.
+            <h1 className="font-display text-white text-3xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-4 md:mb-6">
+              Cinema for <em className="text-[#CC0000] not-italic">brands.</em>
             </h1>
 
-            <p className="text-[#D0CEC9] text-lg md:text-xl font-body font-light leading-relaxed mb-10 max-w-xl">
-              Ads that look like films. Built with AI. We craft high-impact video campaigns for luxury brands — without the cost of a traditional production house.
+            <p className="hidden md:block text-[#D0CEC9] text-xl font-body font-light leading-relaxed mb-10 max-w-xl">
+              You've seen what AI can do. You want someone who knows how to{" "}
+              <em className="not-italic">direct</em> it.
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
               <Link href="/work">
                 <button className="btn-ghost-white">
-                  View Our Work
+                  View Work
                   <ArrowRight size={16} />
                 </button>
               </Link>
@@ -76,7 +80,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="btn-red"
               >
-                Book a Call
+                Start Project
                 <ArrowRight size={16} />
               </a>
             </div>
@@ -119,6 +123,62 @@ export default function Home() {
                 </span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── SELECTED WORK ─── */}
+      {/* Row 1 DOM order: Real Estate first (mobile), Automotive left on desktop via md:order-1 */}
+      <section className="py-24 bg-[#111111]">
+        <div className="container">
+          <div className="reveal mb-10">
+            <div className="section-label-light mb-4">Selected Work</div>
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
+              <h2 className="font-display text-4xl md:text-5xl font-bold text-white max-w-lg leading-tight">
+                Stories that sell.
+              </h2>
+              <Link href="/work">
+                <button className="btn-ghost-white shrink-0">
+                  View All Work <ArrowRight size={15} />
+                </button>
+              </Link>
+            </div>
+          </div>
+
+          {/* Row 1 — 2 large tiles */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            {HOME_ROW_1.map((slug) => {
+              const cat = PORTFOLIO[slug];
+              return (
+                <VideoTile
+                  key={slug}
+                  href={`/work/${slug}`}
+                  category={cat.label}
+                  title={cat.featured}
+                  src={cat.videos[0].src}
+                  poster={cat.poster}
+                  className={`aspect-[4/3] ${slug === "real-estate" ? "md:order-2" : "md:order-1"}`}
+                />
+              );
+            })}
+          </div>
+
+          {/* Row 2 — 3 medium tiles */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {HOME_ROW_2.map((slug) => {
+              const cat = PORTFOLIO[slug];
+              return (
+                <VideoTile
+                  key={slug}
+                  href={`/work/${slug}`}
+                  category={cat.label}
+                  title={cat.featured}
+                  src={cat.videos[0].src}
+                  poster={cat.poster}
+                  className="aspect-[4/3]"
+                />
+              );
+            })}
           </div>
         </div>
       </section>
@@ -178,70 +238,6 @@ export default function Home() {
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── PORTFOLIO PREVIEW ─── */}
-      <section className="py-24 bg-[#F2F0ED]">
-        <div className="container">
-          <div className="reveal mb-12">
-            <div className="section-label mb-4">Featured Work</div>
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-[#111111] max-w-lg leading-tight">
-                Stories that sell.
-              </h2>
-              <Link href="/work">
-                <button className="btn-ghost shrink-0">
-                  View All Work <ArrowRight size={15} />
-                </button>
-              </Link>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Card 1 */}
-            <div className="reveal portfolio-card aspect-[4/3] relative" style={{ transitionDelay: "0ms" }}>
-              <img
-                src={FRAGRANCE_IMG}
-                alt="Mr AM — Luxury Fragrance Campaign"
-                className="w-full h-full object-cover"
-              />
-              <div className="overlay" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
-                <span className="font-mono-am text-[#CC0000] text-[10px] tracking-widest uppercase mb-2 block">
-                  Fragrance / Luxury
-                </span>
-                <h3 className="font-display text-white text-2xl font-semibold">
-                  Mr AM
-                </h3>
-                <p className="text-[#CCC] text-sm font-body mt-1">Luxury Fragrance Campaign</p>
-              </div>
-              <div className="absolute top-4 right-4 z-10">
-                <div className="w-10 h-10 bg-[#CC0000] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <Play size={14} className="text-white ml-0.5" />
-                </div>
-              </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="reveal portfolio-card aspect-[4/3] relative" style={{ transitionDelay: "120ms" }}>
-              <img
-                src={AUTOMOTIVE_IMG}
-                alt="Toyota Corolla — Cinematic Automotive Series"
-                className="w-full h-full object-cover"
-              />
-              <div className="overlay" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
-                <span className="font-mono-am text-[#CC0000] text-[10px] tracking-widest uppercase mb-2 block">
-                  Automotive / Cinematic
-                </span>
-                <h3 className="font-display text-white text-2xl font-semibold">
-                  Toyota Corolla
-                </h3>
-                <p className="text-[#CCC] text-sm font-body mt-1">Cinematic Automotive Series</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>

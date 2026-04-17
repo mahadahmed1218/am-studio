@@ -43,11 +43,13 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link href="/">
-              <div className="flex items-center gap-2 group">
-                <div className="w-8 h-8 bg-[#CC0000] flex items-center justify-center">
-                  <span className="text-white font-display font-bold text-sm leading-none">AM</span>
-                </div>
-                <span className="font-display font-bold text-[#111111] text-lg tracking-tight">
+              <div className="flex items-center gap-3 group">
+                <img
+                  src="/d56c2706-15ab-457c-88f3-668ae44ba29f_removalai_preview.png"
+                  alt="AM Studios logo"
+                  className="h-14 w-14 object-contain"
+                />
+                <span className="font-display font-bold text-[#A8A8A8] text-xl tracking-tight leading-none">
                   AM Studios
                 </span>
               </div>
@@ -93,7 +95,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-40 bg-[#FAF9F7] transition-transform duration-300 lg:hidden ${
+        className={`dev-mobile-menu fixed inset-0 z-40 bg-[#FAF9F7] transition-transform duration-300 lg:hidden ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

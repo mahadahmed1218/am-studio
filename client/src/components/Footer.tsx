@@ -18,10 +18,12 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-start gap-3">
             <Link href="/">
               <div className="flex items-center gap-2">
-                <div className="w-7 h-7 bg-[#CC0000] flex items-center justify-center">
-                  <span className="text-white font-display font-bold text-xs leading-none">AM</span>
-                </div>
-                <span className="font-display font-bold text-white text-base tracking-tight">
+                <img
+                  src="/d56c2706-15ab-457c-88f3-668ae44ba29f_removalai_preview.png"
+                  alt="AM Studios logo"
+                  className="h-10 w-10 object-contain"
+                />
+                <span className="font-display font-bold text-[#A8A8A8] text-base tracking-tight">
                   AM Studios
                 </span>
               </div>
@@ -32,6 +34,14 @@ export default function Footer() {
             <p className="text-[#555] text-xs font-mono-am tracking-widest uppercase">
               Ads that look like films. Built with AI.
             </p>
+            <a
+              href="https://calendly.com/mahadautonexai/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-red text-sm mt-1"
+            >
+              Start Project
+            </a>
           </div>
 
           {/* Nav Links */}

@@ -395,8 +395,39 @@
     padding: 2rem 0;
     transition: all 0.3s ease;
   }
-  
+
   .service-card:hover {
     border-top-color: #CC0000;
+  }
+
+  /* ─── Dev Preview: Mobile Viewport Simulation ─── */
+  /* Activated by DevPreview.tsx — development only */
+  html[data-dev-preview="mobile"] {
+    background: #1c1c1e;
+  }
+
+  html[data-dev-preview="mobile"] body {
+    max-width: 390px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.07), 0 12px 60px rgba(0,0,0,0.6);
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* Constrain fixed navbar to the 390px mobile frame */
+  html[data-dev-preview="mobile"] nav {
+    left: calc(50% - 195px) !important;
+    right: auto !important;
+    width: 390px !important;
+    max-width: 390px !important;
+  }
+
+  /* Constrain the full-screen mobile menu drawer */
+  html[data-dev-preview="mobile"] .dev-mobile-menu {
+    left: calc(50% - 195px) !important;
+    right: auto !important;
+    width: 390px !important;
+    max-width: 390px !important;
   }
 }
