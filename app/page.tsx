@@ -42,7 +42,6 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <video
             src={HERO_VIDEO}
-            poster={HERO_IMG}
             autoPlay
             muted
             loop
