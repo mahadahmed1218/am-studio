@@ -4,7 +4,7 @@
  * WorkCategory — Case study page for each portfolio category.
  * Route: /work/[category]  (e.g. /work/automotive, /work/real-estate)
  */
-import { use, useEffect, useRef } from "react";
+import { use, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Play } from "lucide-react";
 import { PORTFOLIO, CategorySlug, PortfolioVideo } from "@/data/portfolio";
@@ -25,12 +25,53 @@ function useReveal() {
   return ref;
 }
 
+function YouTubeFacade({ videoId, title }: { videoId: string; title: string }) {
+  const [playing, setPlaying] = useState(false);
+  const thumb = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+
+  if (playing) {
+    return (
+      <iframe
+        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`}
+        title={title}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className="w-full h-full border-0"
+      />
+    );
+  }
+
+  return (
+    <button
+      onClick={() => setPlaying(true)}
+      className="w-full h-full relative group cursor-pointer"
+      aria-label={`Play ${title}`}
+    >
+      <img
+        src={thumb}
+        alt={title}
+        loading="lazy"
+        decoding="async"
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-[#0D0D0D]/40 group-hover:bg-[#0D0D0D]/25 transition-colors duration-300" />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="w-16 h-16 bg-[#CC0000] flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+          <Play size={22} className="text-white ml-1" fill="white" />
+        </div>
+      </div>
+    </button>
+  );
+}
+
 function VideoBlock({ video, index }: { video: PortfolioVideo; index: number }) {
   return (
     <div className="reveal">
       {/* Player */}
       <div className="relative bg-[#111] w-full aspect-video overflow-hidden">
-        {video.src ? (
+        {video.youtubeId ? (
+          <YouTubeFacade videoId={video.youtubeId} title={video.title} />
+        ) : video.src ? (
           <video
             src={video.src}
             poster={video.poster}

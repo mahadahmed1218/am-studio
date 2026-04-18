@@ -163,7 +163,7 @@ export default function Home() {
                   title={cat.featured}
                   src={cat.videos[0].src}
                   poster={cat.poster}
-                  className={`aspect-[4/3] ${slug === "real-estate" ? "md:order-2" : "md:order-1"}`}
+                  className="aspect-[4/3]"
                 />
               );
             })}
