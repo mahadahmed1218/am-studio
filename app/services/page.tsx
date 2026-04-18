@@ -1,7 +1,7 @@
 "use client";
 
 /*
- * AM Studios — Services Page
+ * AM Studios · Services Page
  */
 import { useEffect, useRef } from "react";
 import { ArrowRight, Film, Cpu, Layers, Zap, Target, Eye } from "lucide-react";
@@ -28,7 +28,7 @@ const services = [
     icon: <Film size={32} />,
     title: "Cinematic Video Ads",
     description:
-      "Film-quality video campaigns crafted for luxury brands. We direct, produce, and deliver ads that look like they belong in a cinema — not a social feed. Every frame is intentional, every cut is precise.",
+      "Film-quality video campaigns crafted for luxury brands. We direct, produce, and deliver ads that look like they belong in a cinema · not a social feed. Every frame is intentional, every cut is precise.",
     features: [
       "Full campaign concept & storyboard",
       "Cinematic direction & production",
@@ -43,7 +43,7 @@ const services = [
     icon: <Cpu size={32} />,
     title: "AI Production",
     description:
-      "We leverage the most advanced AI production tools to create premium video content at a fraction of traditional costs. The result is indistinguishable from high-budget productions — but faster and more scalable.",
+      "We leverage the most advanced AI production tools to create premium video content at a fraction of traditional costs. The result is indistinguishable from high-budget productions · but faster and more scalable.",
     features: [
       "AI-assisted video generation",
       "Photorealistic product visualization",
@@ -88,7 +88,7 @@ const services = [
     icon: <Target size={32} />,
     title: "Campaign Production",
     description:
-      "End-to-end campaign production from brief to delivery. We handle concept, production, post-production, and asset delivery — so you can focus on launching, not managing.",
+      "End-to-end campaign production from brief to delivery. We handle concept, production, post-production, and asset delivery · so you can focus on launching, not managing.",
     features: [
       "Full brief-to-delivery service",
       "Creative concept development",

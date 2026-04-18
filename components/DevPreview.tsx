@@ -1,9 +1,9 @@
 "use client";
 
 /*
- * DevPreview — Development-only viewport toggle
+ * DevPreview · Development-only viewport toggle
  * Floating bar at bottom-center to switch between Desktop and Mobile (390px) views.
- * Only renders in development mode — stripped from production builds.
+ * Only renders in development mode · stripped from production builds.
  */
 import { useState, useEffect } from "react";
 import { Monitor, Smartphone } from "lucide-react";

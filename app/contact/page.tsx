@@ -1,7 +1,7 @@
 "use client";
 
 /*
- * AM Studios — Contact Page
+ * AM Studios · Contact Page
  */
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, Calendar, MessageCircle, Mail, MapPin } from "lucide-react";
@@ -135,7 +135,7 @@ export default function Contact() {
                     <p className="font-mono-am text-[10px] text-[#888] tracking-widest uppercase mb-1">
                       Location
                     </p>
-                    <p className="font-body text-sm text-[#333]">Australia — Serving Globally</p>
+                    <p className="font-body text-sm text-[#333]">Australia · Serving Globally</p>
                   </div>
                 </div>
 

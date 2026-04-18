@@ -1,7 +1,7 @@
 "use client";
 
 /*
- * AM Studios — Work Page (/work)
+ * AM Studios · Work Page (/work)
  * Full portfolio grid: 2 large tiles (Row 1) + 3 medium tiles (Row 2).
  */
 import { useEffect, useRef } from "react";
@@ -51,7 +51,7 @@ export default function Work() {
       {/* Portfolio Grid */}
       <section className="pb-24 bg-[#111111]">
         <div className="container py-16">
-          {/* Row 1 — 2 large tiles */}
+          {/* Row 1 · 2 large tiles */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             {HOME_ROW_1.map((slug) => {
               const cat = PORTFOLIO[slug];
@@ -69,7 +69,7 @@ export default function Work() {
             })}
           </div>
 
-          {/* Row 2 — 3 medium tiles */}
+          {/* Row 2 · 3 medium tiles */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {HOME_ROW_2.map((slug) => {
               const cat = PORTFOLIO[slug];

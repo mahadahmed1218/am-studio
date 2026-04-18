@@ -1,7 +1,7 @@
 "use client";
 
 /*
- * AM Studios — About Page
+ * AM Studios · About Page
  */
 import { useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
@@ -34,7 +34,7 @@ const values = [
   {
     num: "02",
     title: "AI-Powered Precision",
-    desc: "We use the most advanced AI production tools available — not to cut corners, but to achieve a level of precision that traditional production can't match.",
+    desc: "We use the most advanced AI production tools available · not to cut corners, but to achieve a level of precision that traditional production can't match.",
   },
   {
     num: "03",
@@ -44,7 +44,7 @@ const values = [
   {
     num: "04",
     title: "Speed Without Compromise",
-    desc: "48-hour turnaround is our standard — not because we rush, but because our AI-powered pipeline is built for speed without sacrificing quality.",
+    desc: "48-hour turnaround is our standard · not because we rush, but because our AI-powered pipeline is built for speed without sacrificing quality.",
   },
 ];
 
@@ -100,13 +100,13 @@ export default function About() {
                 &quot;AM Studios is a cinematic AI production agency built for premium brands.&quot;
               </p>
               <p className="text-[#555] font-body text-base leading-relaxed mb-6">
-                We create high-impact video campaigns that look like films — without the cost of a
+                We create high-impact video campaigns that look like films · without the cost of a
                 traditional production house. Our AI-powered pipeline combines the artistry of
                 cinema with the efficiency of technology.
               </p>
               <p className="text-[#555] font-body text-base leading-relaxed mb-6">
                 Founded with a single belief: that every brand deserves content that commands
-                attention. Not just ads — films. Not just content — campaigns that define a
+                attention. Not just ads · films. Not just content · campaigns that define a
                 brand&apos;s visual identity for years to come.
               </p>
               <p className="text-[#555] font-body text-base leading-relaxed mb-10">

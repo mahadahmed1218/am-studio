@@ -1,8 +1,8 @@
 "use client";
 
 /*
- * AM Studios — Home Page
- * Design: Precision Editorial — warm off-white bg, Playfair headlines, red accents
+ * AM Studios · Home Page
+ * Design: Precision Editorial · warm off-white bg, Playfair headlines, red accents
  * Sections: Hero, Stats, Services Preview, Portfolio Preview, Testimonials, CTA
  */
 import { useEffect, useRef } from "react";
@@ -149,7 +149,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Row 1 — 2 large tiles */}
+          {/* Row 1 · 2 large tiles */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             {HOME_ROW_1.map((slug) => {
               const cat = PORTFOLIO[slug];
@@ -167,7 +167,7 @@ export default function Home() {
             })}
           </div>
 
-          {/* Row 2 — 3 medium tiles */}
+          {/* Row 2 · 3 medium tiles */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {HOME_ROW_2.map((slug) => {
               const cat = PORTFOLIO[slug];
@@ -222,7 +222,7 @@ export default function Home() {
                 icon: <Layers size={28} />,
                 num: "03",
                 title: "Brand Strategy",
-                desc: "From concept to campaign — we define your visual identity and craft narratives that command attention.",
+                desc: "From concept to campaign · we define your visual identity and craft narratives that command attention.",
               },
             ].map((service, i) => (
               <div

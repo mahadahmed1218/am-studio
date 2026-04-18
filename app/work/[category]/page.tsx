@@ -1,7 +1,7 @@
 "use client";
 
 /*
- * WorkCategory — Case study page for each portfolio category.
+ * WorkCategory · Case study page for each portfolio category.
  * Route: /work/[category]  (e.g. /work/automotive, /work/real-estate)
  */
 import { use, useEffect, useRef, useState } from "react";

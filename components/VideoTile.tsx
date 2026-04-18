@@ -1,7 +1,7 @@
 "use client";
 
 /*
- * VideoTile — portfolio card used on Home and Work pages.
+ * VideoTile · portfolio card used on Home and Work pages.
  * Autoplays muted when scrolled 40%+ into view (if a video src is provided).
  * Falls back to poster image until a video is uploaded.
  * Clicking navigates to the category case study page.
