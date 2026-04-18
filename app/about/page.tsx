@@ -211,7 +211,7 @@ export default function About() {
             </p>
             <div className="flex flex-wrap gap-4">
               <a
-                href="https://calendly.com/mahadautonexai/30min"
+                href="https://calendly.com/amstudioai-info/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-red text-base px-8 py-4"
@@ -219,7 +219,7 @@ export default function About() {
                 Book a Call <ArrowRight size={16} />
               </a>
               <a
-                href="https://wa.me/61435781363"
+                href="https://wa.me/61493300023"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-ghost-white text-base px-8 py-4"

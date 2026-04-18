@@ -81,9 +81,9 @@ export const PORTFOLIO: Record<CategorySlug, PortfolioCategory> = {
         poster: "https://img.youtube.com/vi/1OYI47ju_B0/maxresdefault.jpg",
       },
       {
-        title: "The Tailor — Extended Cut",
+        title: "The Tailor — Wear It Your Way",
         context:
-          "An extended look into the world of the tailor — more texture, more depth, same precision.",
+          "See your garments come to life on the model that fits your brand.",
         src: "",
         youtubeId: "ayqxDRgswsU",
         poster: "https://img.youtube.com/vi/ayqxDRgswsU/maxresdefault.jpg",

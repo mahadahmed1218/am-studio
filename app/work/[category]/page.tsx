@@ -181,7 +181,7 @@ export default function WorkCategory({ params }: { params: Promise<{ category: s
               Book a free 30-minute strategy call and let&apos;s talk about your brand.
             </p>
             <a
-              href="https://calendly.com/mahadautonexai/30min"
+              href="https://calendly.com/amstudioai-info/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-red text-base px-8 py-4"

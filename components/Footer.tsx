@@ -35,7 +35,7 @@ export default function Footer() {
               Ads that look like films. Built with AI.
             </p>
             <a
-              href="https://calendly.com/mahadautonexai/30min"
+              href="https://calendly.com/amstudioai-info/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-red text-sm mt-1"
@@ -90,7 +90,7 @@ export default function Footer() {
               <Linkedin size={15} />
             </a>
             <a
-              href="https://wa.me/61435781363"
+              href="https://wa.me/61493300023"
               target="_blank"
               rel="noopener noreferrer"
               className="w-9 h-9 border border-[#333] flex items-center justify-center text-[#888] hover:text-white hover:border-[#CC0000] transition-all"

@@ -72,7 +72,7 @@ export default function Navbar() {
             {/* CTA Button */}
             <div className="hidden lg:flex items-center">
               <a
-                href="https://calendly.com/mahadautonexai/30min"
+                href="https://calendly.com/amstudioai-info/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-red text-sm"
@@ -121,7 +121,7 @@ export default function Navbar() {
           </div>
           <div className="mt-10">
             <a
-              href="https://calendly.com/mahadautonexai/30min"
+              href="https://calendly.com/amstudioai-info/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-red w-full justify-center text-base py-4"
@@ -131,7 +131,7 @@ export default function Navbar() {
           </div>
           <div className="mt-4">
             <a
-              href="https://wa.me/61435781363"
+              href="https://wa.me/61493300023"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-ghost w-full justify-center text-base py-4"

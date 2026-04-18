@@ -63,8 +63,7 @@ export default function Home() {
             </h1>
 
             <p className="hidden md:block text-[#D0CEC9] text-xl font-body font-light leading-relaxed mb-10 max-w-xl">
-              You&apos;ve seen what AI can do. You want someone who knows how to{" "}
-              <em className="not-italic">direct</em> it.
+              We make brands look like they spent $500K on production. Without spending it.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
@@ -75,7 +74,7 @@ export default function Home() {
                 </button>
               </Link>
               <a
-                href="https://calendly.com/mahadautonexai/30min"
+                href="https://calendly.com/amstudioai-info/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-red"
@@ -245,54 +244,50 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── TESTIMONIALS ─── */}
+      {/* ─── WHY AM STUDIOS ─── */}
       <section className="py-24 bg-[#FAF9F7]">
         <div className="container">
-          <div className="reveal mb-14">
-            <div className="section-label mb-4">Client Words</div>
+          <div className="reveal mb-16">
+            <div className="section-label mb-4">Why AM Studios</div>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-[#111111] max-w-lg leading-tight">
-              What our clients say.
+              Why AM Studios
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
             {[
               {
-                quote:
-                  "AM Studios delivered a campaign that looked like a Hollywood production. The quality was extraordinary — and they turned it around in 48 hours. Our brand has never looked better.",
-                name: "James R.",
-                role: "Founder, Luxury Fragrance Brand",
-                delay: "0ms",
+                num: "01",
+                title: "AI-Powered Production",
+                desc: "Cinema-quality output without traditional production costs or timelines.",
               },
               {
-                quote:
-                  "I was skeptical about AI production, but AM Studios completely changed my perspective. The final video was cinematic, polished, and exactly on-brand. Exceptional work.",
-                name: "Sarah M.",
-                role: "Marketing Director, Premium Automotive",
-                delay: "120ms",
+                num: "02",
+                title: "48hr Turnaround",
+                desc: "From brief to delivered. Faster than any traditional studio on the market.",
               },
-            ].map((t) => (
+              {
+                num: "03",
+                title: "Premium Only",
+                desc: "We work exclusively with brands that refuse to look ordinary.",
+              },
+              {
+                num: "04",
+                title: "Direction, Not Just Generation",
+                desc: "Anyone can prompt AI. We direct it like a film.",
+              },
+            ].map((item, i) => (
               <div
-                key={t.name}
-                className="reveal bg-white border border-[#E8E6E3] p-8 relative"
-                style={{ transitionDelay: t.delay }}
+                key={item.num}
+                className="reveal flex gap-6"
+                style={{ transitionDelay: `${i * 100}ms` }}
               >
-                <div className="text-[#CC0000] text-5xl font-display leading-none mb-4 select-none">
-                  &quot;
-                </div>
-                <p className="text-[#333] font-body text-base leading-relaxed mb-6 italic">
-                  {t.quote}
-                </p>
-                <div className="flex items-center gap-3 pt-4 border-t border-[#E8E6E3]">
-                  <div className="w-10 h-10 bg-[#111111] flex items-center justify-center">
-                    <span className="text-white font-display font-bold text-sm">
-                      {t.name[0]}
-                    </span>
-                  </div>
-                  <div>
-                    <p className="font-body font-semibold text-[#111111] text-sm">{t.name}</p>
-                    <p className="font-mono-am text-[#888] text-xs">{t.role}</p>
-                  </div>
+                <span className="font-mono-am text-[#CC0000] text-xs mt-1 shrink-0">{item.num}</span>
+                <div>
+                  <h3 className="font-display text-xl font-semibold text-[#111111] mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-[#666] font-body text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -346,7 +341,7 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <a
-                href="https://calendly.com/mahadautonexai/30min"
+                href="https://calendly.com/amstudioai-info/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-red text-base px-8 py-4"
@@ -354,7 +349,7 @@ export default function Home() {
                 Book a Call <ArrowRight size={16} />
               </a>
               <a
-                href="https://wa.me/61435781363"
+                href="https://wa.me/61493300023"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-ghost-white text-base px-8 py-4"

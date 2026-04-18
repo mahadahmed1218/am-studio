@@ -100,7 +100,7 @@ export default function Work() {
               Let&apos;s create your next campaign together.
             </p>
             <a
-              href="https://calendly.com/mahadautonexai/30min"
+              href="https://calendly.com/amstudioai-info/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-red text-base px-8 py-4"

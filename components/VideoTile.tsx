@@ -80,10 +80,10 @@ export default function VideoTile({
 
         {/* Text */}
         <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6 z-10">
-          <span className="font-mono-am text-[#CC0000] text-[10px] tracking-widest uppercase block mb-2">
+          <span className="font-mono-am text-white text-[10px] tracking-widest uppercase block mb-2">
             {category}
           </span>
-          <h3 className="font-display text-white text-xl md:text-2xl font-semibold leading-tight mb-2">
+          <h3 className="font-display text-[#CC0000] text-xl md:text-2xl font-semibold leading-tight mb-2">
             {title}
           </h3>
           <div className="flex items-center gap-1.5 text-[#AAA] opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">

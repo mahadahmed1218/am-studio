@@ -73,7 +73,7 @@ export default function Contact() {
               {/* Primary CTAs */}
               <div className="space-y-4 mb-12">
                 <a
-                  href="https://calendly.com/mahadautonexai/30min"
+                  href="https://calendly.com/amstudioai-info/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-5 bg-[#CC0000] text-white group hover:bg-[#AA0000] transition-colors"
@@ -94,7 +94,7 @@ export default function Contact() {
                 </a>
 
                 <a
-                  href="https://wa.me/61435781363"
+                  href="https://wa.me/61493300023"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-5 bg-[#111111] text-white group hover:bg-[#222] transition-colors"
@@ -104,7 +104,7 @@ export default function Contact() {
                   </div>
                   <div className="flex-1">
                     <p className="font-body font-semibold text-sm">WhatsApp Us</p>
-                    <p className="font-mono-am text-xs text-white/50 mt-0.5">+61 435 781 363</p>
+                    <p className="font-mono-am text-xs text-white/50 mt-0.5">+61 493 300 023</p>
                   </div>
                   <ArrowRight
                     size={16}
@@ -123,7 +123,7 @@ export default function Contact() {
                     <p className="font-mono-am text-[10px] text-[#888] tracking-widest uppercase mb-1">
                       Email
                     </p>
-                    <p className="font-body text-sm text-[#333]">hello@amstudios.ai</p>
+                    <p className="font-body text-sm text-[#333]">info@amstudioai.com</p>
                   </div>
                 </div>
 
@@ -147,7 +147,7 @@ export default function Contact() {
                     <p className="font-mono-am text-[10px] text-[#888] tracking-widest uppercase mb-1">
                       WhatsApp
                     </p>
-                    <p className="font-body text-sm text-[#333]">+61 435 781 363</p>
+                    <p className="font-body text-sm text-[#333]">+61 493 300 023</p>
                   </div>
                 </div>
               </div>
@@ -190,7 +190,7 @@ export default function Contact() {
                     meantime, feel free to book a call directly.
                   </p>
                   <a
-                    href="https://calendly.com/mahadautonexai/30min"
+                    href="https://calendly.com/amstudioai-info/30min"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-red mt-8"
@@ -287,7 +287,7 @@ export default function Contact() {
                     <span className="font-mono-am text-[10px] text-[#888] tracking-wider">
                       Or book a call directly →{" "}
                       <a
-                        href="https://calendly.com/mahadautonexai/30min"
+                        href="https://calendly.com/amstudioai-info/30min"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-[#CC0000] hover:underline"
