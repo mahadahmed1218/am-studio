@@ -98,7 +98,7 @@ export default function About() {
                 src={MAHAD_SRC}
                 controls
                 playsInline
-                preload="none"
+                preload="metadata"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -125,7 +125,7 @@ export default function About() {
                 src={AFHAM_SRC}
                 controls
                 playsInline
-                preload="none"
+                preload="metadata"
                 className="w-full h-full object-cover"
               />
             </div>
