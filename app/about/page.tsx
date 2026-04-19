@@ -6,8 +6,8 @@
 import { useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
 
-const ABOUT_IMG =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663549779214/jbDR64QUCbzPJiDzPktCcD/am-studios-about-Hky4UhH7Q6RFX3vhVpwqvE.webp";
+const MAHAD_SRC = "/mahad-ahmed.mp4";
+const AFHAM_SRC = "/afham-kamran.mp4";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -64,8 +64,9 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-[#FAF9F7]" ref={revealRef}>
+
       {/* Page Header */}
-      <section className="pt-36 pb-0">
+      <section className="pt-36 pb-20 bg-[#FAF9F7]">
         <div className="container">
           <div className="reveal">
             <div className="section-label mb-5">About AM Studios</div>
@@ -78,60 +79,69 @@ export default function About() {
         </div>
       </section>
 
-      {/* Split Section */}
-      <section className="py-20">
+      {/* ─── FOUNDERS ─── */}
+      <section className="py-24 bg-[#0D0D0D]">
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Image */}
-            <div className="reveal">
-              <div className="relative">
-                <img
-                  src={ABOUT_IMG}
-                  alt="AM Studios production"
-                  className="w-full aspect-[4/3] object-cover"
-                />
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#CC0000] z-[-1]" />
-              </div>
+          <div className="reveal mb-20">
+            <div className="section-label-light mb-4">The Founders</div>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-white leading-tight max-w-lg">
+              The people
+              <br />
+              behind the lens.
+            </h2>
+          </div>
+
+          {/* Mahad Ahmed */}
+          <div className="reveal grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-24 pb-24 border-b border-[#1E1E1E]">
+            <div className="aspect-square bg-[#111] overflow-hidden">
+              <video
+                src={MAHAD_SRC}
+                controls
+                playsInline
+                preload="none"
+                className="w-full h-full object-cover"
+              />
             </div>
+            <div className="reveal" style={{ transitionDelay: "120ms" }}>
+              <span className="font-mono-am text-[#CC0000] text-[10px] tracking-widest uppercase block mb-4">
+                Co-Founder · Head of Strategy
+              </span>
+              <h3 className="font-display text-3xl md:text-4xl font-bold text-white mb-6">
+                Mahad Ahmed
+              </h3>
+              <p className="text-[#888] font-body text-base leading-relaxed">
+                Mahad runs strategy and delivery at AM Studios. He works directly with brand
+                clients on campaign planning, production timelines, and performance outcomes.
+                Based in Sydney, he operates the studio&apos;s international client pipeline.
+                Focused on making AI advertising a reliable business outcome, not a novelty.
+              </p>
+            </div>
+          </div>
 
-            {/* Text */}
-            <div className="reveal" style={{ transitionDelay: "100ms" }}>
-              <p className="font-display text-2xl md:text-3xl font-medium text-[#111111] leading-relaxed mb-8">
-                &quot;AM Studios is a cinematic AI production agency built for premium brands.&quot;
+          {/* Afham Kamran */}
+          <div className="reveal grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="aspect-square bg-[#111] overflow-hidden lg:order-2">
+              <video
+                src={AFHAM_SRC}
+                controls
+                playsInline
+                preload="none"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="reveal lg:order-1" style={{ transitionDelay: "120ms" }}>
+              <span className="font-mono-am text-[#CC0000] text-[10px] tracking-widest uppercase block mb-4">
+                Co-Founder · Creative Director
+              </span>
+              <h3 className="font-display text-3xl md:text-4xl font-bold text-white mb-6">
+                Afham Kamran
+              </h3>
+              <p className="text-[#888] font-body text-base leading-relaxed">
+                Afham leads the creative direction at AM Studios. Before founding AM, he spent
+                years building content systems and directing video work for brands across multiple
+                markets. He writes, directs, and oversees every campaign the studio ships.
+                Obsessed with the intersection of AI, craft, and cinema.
               </p>
-              <p className="text-[#555] font-body text-base leading-relaxed mb-6">
-                We create high-impact video campaigns that look like films · without the cost of a
-                traditional production house. Our AI-powered pipeline combines the artistry of
-                cinema with the efficiency of technology.
-              </p>
-              <p className="text-[#555] font-body text-base leading-relaxed mb-6">
-                Founded with a single belief: that every brand deserves content that commands
-                attention. Not just ads · films. Not just content · campaigns that define a
-                brand&apos;s visual identity for years to come.
-              </p>
-              <p className="text-[#555] font-body text-base leading-relaxed mb-10">
-                We work exclusively with premium and luxury brands because we believe that quality
-                is non-negotiable. If you&apos;re building something extraordinary, we want to help
-                you show the world.
-              </p>
-
-              <div className="grid grid-cols-2 gap-6 pt-8 border-t border-[#E8E6E3]">
-                {[
-                  { num: "10+", label: "Campaigns" },
-                  { num: "48hr", label: "Turnaround" },
-                  { num: "100%", label: "Satisfaction" },
-                  { num: "4+", label: "Industries" },
-                ].map((stat) => (
-                  <div key={stat.num}>
-                    <span className="font-display text-3xl font-bold text-[#111111] block">
-                      {stat.num}
-                    </span>
-                    <span className="font-mono-am text-[#888] text-xs tracking-widest uppercase">
-                      {stat.label}
-                    </span>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </div>
