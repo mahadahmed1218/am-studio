@@ -115,7 +115,7 @@ export default function Home() {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-[#333]">
             {[
-              { num: "10+", label: "Campaigns Delivered" },
+              { num: "50+", label: "Campaigns Delivered" },
               { num: "48hr", label: "Turnaround Time" },
               { num: "100%", label: "Client Satisfaction" },
             ].map((stat) => (
