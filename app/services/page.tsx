@@ -4,7 +4,7 @@
  * AM Studios · Services Page
  */
 import { useEffect, useRef } from "react";
-import { ArrowRight, Film, Cpu, Layers, Zap, Target, Eye } from "lucide-react";
+import { ArrowRight, Film, Cpu, Layers } from "lucide-react";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -28,13 +28,14 @@ const services = [
     icon: <Film size={32} />,
     title: "Cinematic Video Ads",
     description:
-      "Film-quality video campaigns crafted for luxury brands. We direct, produce, and deliver ads that look like they belong in a cinema · not a social feed. Every frame is intentional, every cut is precise.",
+      "Film-quality video campaigns built for premium brands. We direct, produce, and deliver ads that look like they belong in a cinema · not a social feed. Every frame intentional. Every cut precise.",
     features: [
       "Full campaign concept & storyboard",
-      "Cinematic direction & production",
-      "Professional color grading",
+      "Cinematic direction & AI production",
+      "Professional colour grading & sound design",
       "Multi-format delivery (16:9, 9:16, 1:1)",
-      "48-hour turnaround available",
+      "48-hour turnaround",
+      "2 rounds of revisions included",
     ],
     industries: ["Luxury Automotive", "Fragrance", "Fashion", "Real Estate"],
   },
@@ -43,75 +44,30 @@ const services = [
     icon: <Cpu size={32} />,
     title: "AI Production",
     description:
-      "We leverage the most advanced AI production tools to create premium video content at a fraction of traditional costs. The result is indistinguishable from high-budget productions · but faster and more scalable.",
+      "We use advanced AI production tools to create premium video content that is indistinguishable from high-budget traditional production · delivered faster and at a fraction of the cost.",
     features: [
-      "AI-assisted video generation",
-      "Photorealistic product visualization",
-      "AI voiceover & sound design",
-      "Rapid iteration & revision",
-      "Scalable content production",
+      "AI-assisted cinematic video generation",
+      "Photorealistic product visualisation",
+      "AI voiceover & professional sound design",
+      "Rapid iteration with same-day revisions",
+      "Scalable content production for ongoing campaigns",
     ],
     industries: ["Premium Brands", "E-Commerce", "Startups", "FMCG"],
   },
   {
     num: "03",
     icon: <Layers size={32} />,
-    title: "Brand Strategy",
+    title: "Brand Strategy & Direction",
     description:
-      "Before a single frame is shot, we define your brand's visual language. From positioning to visual identity, we craft the strategic foundation that makes every campaign cohesive and compelling.",
+      "We don\u2019t just produce content. We define the visual language your brand speaks. From narrative concept to campaign direction, we make sure every piece of content builds a consistent, premium identity.",
     features: [
-      "Brand positioning & messaging",
-      "Visual identity development",
-      "Campaign concept creation",
-      "Competitor analysis",
-      "Content strategy roadmap",
+      "Brand narrative & visual identity direction",
+      "Campaign concept development",
+      "Audience & positioning strategy",
+      "Content calendar planning",
+      "Ongoing creative direction retainer available",
     ],
-    industries: ["New Brands", "Rebrands", "Luxury", "Premium Lifestyle"],
-  },
-  {
-    num: "04",
-    icon: <Zap size={32} />,
-    title: "Social Content Packages",
-    description:
-      "Consistent, high-quality content for Instagram, TikTok, and YouTube. We create monthly content packages that maintain your brand&apos;s premium aesthetic across every platform.",
-    features: [
-      "Monthly content calendar",
-      "Platform-optimized formats",
-      "Reels, Stories & Feed content",
-      "Consistent brand aesthetic",
-      "Performance-driven creative",
-    ],
-    industries: ["Fashion", "Beauty", "Lifestyle", "Hospitality"],
-  },
-  {
-    num: "05",
-    icon: <Target size={32} />,
-    title: "Campaign Production",
-    description:
-      "End-to-end campaign production from brief to delivery. We handle concept, production, post-production, and asset delivery · so you can focus on launching, not managing.",
-    features: [
-      "Full brief-to-delivery service",
-      "Creative concept development",
-      "Production management",
-      "Post-production & editing",
-      "Final asset delivery package",
-    ],
-    industries: ["All Premium Brands", "Agencies", "In-House Teams"],
-  },
-  {
-    num: "06",
-    icon: <Eye size={32} />,
-    title: "Product Visualization",
-    description:
-      "Photorealistic AI-powered product visualization for brands that need stunning visuals without a physical shoot. Perfect for launches, e-commerce, and campaign assets.",
-    features: [
-      "Photorealistic 3D-style renders",
-      "Multiple angles & environments",
-      "Lifestyle context placement",
-      "E-commerce ready assets",
-      "Fast turnaround",
-    ],
-    industries: ["Fragrance", "Cosmetics", "Automotive", "Luxury Goods"],
+    industries: ["All Industries", "New Brands", "Rebrands"],
   },
 ];
 
@@ -138,6 +94,54 @@ const process = [
   },
 ];
 
+const socialStats = [
+  { num: "100M+", label: "Organic Views Generated" },
+  { num: "30.9K", label: "Instagram Followers" },
+  { num: "48hrs", label: "Average Delivery Time" },
+  { num: "5", label: "Industries Served" },
+];
+
+const pricing = [
+  {
+    label: "STARTER",
+    price: "From $800 AUD",
+    ideal: "Single product or brand launch content",
+    popular: false,
+    includes: [
+      "1 cinematic video ad",
+      "3 format exports (16:9, 9:16, 1:1)",
+      "1 round of revisions",
+      "48hr delivery",
+    ],
+  },
+  {
+    label: "STANDARD",
+    price: "From $1,500 AUD",
+    ideal: "Campaign-ready brands wanting multi-use content",
+    popular: true,
+    includes: [
+      "1 cinematic video ad",
+      "All format exports",
+      "2 rounds of revisions",
+      "48hr delivery",
+      "Basic brand direction included",
+    ],
+  },
+  {
+    label: "CAMPAIGN",
+    price: "From $3,000 AUD",
+    ideal: "Brands running paid ads or launching a full campaign",
+    popular: false,
+    includes: [
+      "3 cinematic video ads",
+      "All format exports",
+      "Unlimited revisions",
+      "Full campaign concept & storyboard",
+      "Brand strategy session included",
+    ],
+  },
+];
+
 export default function Services() {
   const revealRef = useReveal();
 
@@ -154,8 +158,9 @@ export default function Services() {
               <em className="text-[#CC0000] not-italic">Extraordinary</em> results.
             </h1>
             <p className="text-[#666] font-body text-lg mt-6 max-w-xl leading-relaxed">
-              From concept to delivery, we offer a complete suite of cinematic production services
-              designed for brands that refuse to look ordinary.
+              From concept to delivery in 48 hours. AI-powered production for premium brands across
+              fragrance, automotive, fashion, and real estate. Our content has generated 100M+
+              organic views across platforms.
             </p>
           </div>
         </div>
@@ -243,6 +248,98 @@ export default function Services() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Social Proof Stats Bar */}
+      <section className="bg-[#0D0D0D] py-10 border-t border-[#1E1E1E]">
+        <div className="container">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-0 divide-y md:divide-y-0 md:divide-x divide-[#222]">
+            {socialStats.map((stat) => (
+              <div key={stat.num} className="flex flex-col items-center py-8 px-6">
+                <span className="font-display text-4xl md:text-5xl font-bold text-white mb-2">
+                  {stat.num}
+                </span>
+                <span className="font-mono-am text-[#888] text-xs tracking-widest uppercase text-center">
+                  {stat.label}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-24 bg-[#0D0D0D]">
+        <div className="container">
+          <div className="reveal mb-14">
+            <div className="section-label mb-4">Investment</div>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-white max-w-lg leading-tight">
+              Transparent pricing.
+              <br />
+              No surprises.
+            </h2>
+            <p className="text-[#888] font-body text-lg mt-4 max-w-xl leading-relaxed">
+              Every project is scoped to your brief. These packages are our starting points.
+            </p>
+          </div>
+
+          <div className="reveal grid grid-cols-1 md:grid-cols-3 gap-4">
+            {pricing.map((plan, i) => (
+              <div
+                key={plan.label}
+                className={`relative flex flex-col p-8 border ${
+                  plan.popular ? "border-[#CC0000]" : "border-[#1E1E1E]"
+                } bg-[#111111]`}
+                style={{ transitionDelay: `${i * 80}ms` }}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-px left-8">
+                    <span className="font-mono-am text-[10px] tracking-widest bg-[#CC0000] text-white px-3 py-1 uppercase">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+
+                <div className="mb-6 pt-2">
+                  <span className="font-mono-am text-[#CC0000] text-[10px] tracking-widest uppercase block mb-3">
+                    {plan.label}
+                  </span>
+                  <div className="font-display text-3xl font-bold text-white mb-2">
+                    {plan.price}
+                  </div>
+                  <p className="text-[#666] font-body text-xs leading-relaxed">{plan.ideal}</p>
+                </div>
+
+                <ul className="space-y-3 mb-8 flex-1">
+                  {plan.includes.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="w-4 h-px bg-[#CC0000] mt-2.5 shrink-0" />
+                      <span className="text-[#AAA] font-body text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <a
+                  href="https://calendly.com/amstudioai-info/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex items-center justify-center gap-2 py-3 px-6 font-mono-am text-[11px] tracking-widest uppercase transition-colors duration-200 ${
+                    plan.popular
+                      ? "bg-[#CC0000] text-white hover:bg-[#AA0000]"
+                      : "border border-[#333] text-[#888] hover:border-[#555] hover:text-white"
+                  }`}
+                >
+                  Book a Call <ArrowRight size={12} />
+                </a>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-[#555] font-body text-sm mt-8 text-center leading-relaxed">
+            All prices in AUD. Custom quotes available for ongoing retainers and larger campaigns.
+            Contact us to discuss your project.
+          </p>
         </div>
       </section>
 
