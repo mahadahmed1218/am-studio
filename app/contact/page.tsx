@@ -94,7 +94,7 @@ export default function Contact() {
                 </a>
 
                 <a
-                  href="https://wa.me/61493300023"
+                  href="https://wa.me/61456007795"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-5 bg-[#111111] text-white group hover:bg-[#222] transition-colors"
@@ -104,7 +104,7 @@ export default function Contact() {
                   </div>
                   <div className="flex-1">
                     <p className="font-body font-semibold text-sm">WhatsApp Us</p>
-                    <p className="font-mono-am text-xs text-white/50 mt-0.5">+61 493 300 023</p>
+                    <p className="font-mono-am text-xs text-white/50 mt-0.5">+61 456 007 795</p>
                   </div>
                   <ArrowRight
                     size={16}
@@ -147,7 +147,7 @@ export default function Contact() {
                     <p className="font-mono-am text-[10px] text-[#888] tracking-widest uppercase mb-1">
                       WhatsApp
                     </p>
-                    <p className="font-body text-sm text-[#333]">+61 493 300 023</p>
+                    <p className="font-body text-sm text-[#333]">+61 456 007 795</p>
                   </div>
                 </div>
               </div>

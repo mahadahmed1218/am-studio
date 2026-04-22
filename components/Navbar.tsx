@@ -131,7 +131,7 @@ export default function Navbar() {
           </div>
           <div className="mt-4">
             <a
-              href="https://wa.me/61493300023"
+              href="https://wa.me/61456007795"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-ghost w-full justify-center text-base py-4"

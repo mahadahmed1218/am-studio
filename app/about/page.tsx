@@ -229,7 +229,7 @@ export default function About() {
                 Book a Call <ArrowRight size={16} />
               </a>
               <a
-                href="https://wa.me/61493300023"
+                href="https://wa.me/61456007795"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-ghost-white text-base px-8 py-4"

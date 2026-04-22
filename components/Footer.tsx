@@ -90,7 +90,7 @@ export default function Footer() {
               <Linkedin size={15} />
             </a>
             <a
-              href="https://wa.me/61493300023"
+              href="https://wa.me/61456007795"
               target="_blank"
               rel="noopener noreferrer"
               className="w-9 h-9 border border-[#333] flex items-center justify-center text-[#888] hover:text-white hover:border-[#CC0000] transition-all"
