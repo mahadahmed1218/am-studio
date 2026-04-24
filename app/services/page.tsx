@@ -71,28 +71,6 @@ const services = [
   },
 ];
 
-const process = [
-  {
-    step: "01",
-    title: "Discovery Call",
-    desc: "We learn about your brand, goals, and vision in a focused 30-minute strategy session.",
-  },
-  {
-    step: "02",
-    title: "Concept & Strategy",
-    desc: "Our team develops a cinematic concept tailored to your brand identity and campaign objectives.",
-  },
-  {
-    step: "03",
-    title: "Production",
-    desc: "We execute the production using our AI-powered pipeline, maintaining film-quality standards throughout.",
-  },
-  {
-    step: "04",
-    title: "Review & Delivery",
-    desc: "You review the work, we refine based on feedback, and deliver final assets within 48 hours.",
-  },
-];
 
 const socialStats = [
   { num: "100M+", label: "Organic Views Generated" },
@@ -231,37 +209,6 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-16 md:py-24 bg-[#111111]">
-        <div className="container">
-          <div className="reveal mb-10 lg:mb-16">
-            <div className="section-label mb-4">How It Works</div>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white max-w-lg leading-tight">
-              From brief to
-              <br />
-              cinematic delivery.
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 divide-y md:divide-y-0 md:divide-x divide-[#333]">
-            {process.map((step, i) => (
-              <div
-                key={step.step}
-                className="reveal px-0 md:px-8 first:pl-0 last:pr-0 py-7 md:py-0"
-                style={{ transitionDelay: `${i * 100}ms` }}
-              >
-                <span className="font-mono-am text-[#CC0000] text-xs tracking-widest block mb-3">
-                  {step.step}
-                </span>
-                <h3 className="font-display text-lg md:text-xl font-semibold text-white mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-[#888] font-body text-sm leading-relaxed">{step.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Social Proof Stats Bar */}
       <section className="bg-[#0D0D0D] border-t border-[#1E1E1E]">
