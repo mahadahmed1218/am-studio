@@ -152,6 +152,82 @@ export default function Services() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section className="py-16 md:py-24 bg-[#0D0D0D]">
+        <div className="container">
+          <div className="reveal mb-10 md:mb-14">
+            <div className="section-label mb-4">Investment</div>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white max-w-lg leading-tight">
+              Transparent pricing.
+              <br />
+              No surprises.
+            </h2>
+            <p className="text-[#888] font-body text-base md:text-lg mt-4 max-w-xl leading-relaxed">
+              Every project is scoped to your brief. These packages are our starting points.
+            </p>
+          </div>
+
+          <div className="reveal grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
+            {pricing.map((plan, i) => (
+              <div
+                key={plan.label}
+                className={`relative flex flex-col p-6 md:p-8 border ${
+                  plan.popular ? "border-[#CC0000]" : "border-[#1E1E1E]"
+                } bg-[#111111]`}
+                style={{ transitionDelay: `${i * 80}ms` }}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-px left-6 md:left-8">
+                    <span className="font-mono-am text-[10px] tracking-widest bg-[#CC0000] text-white px-3 py-1 uppercase">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+
+                <div className={`mb-5 ${plan.popular ? "pt-4" : "pt-1"}`}>
+                  <span className="font-mono-am text-[#CC0000] text-[10px] tracking-widest uppercase block mb-3">
+                    {plan.label}
+                  </span>
+                  <div className="font-display text-2xl md:text-3xl font-bold text-white mb-2">
+                    {plan.price}
+                  </div>
+                  <p className="text-[#555] font-body text-xs leading-relaxed">{plan.ideal}</p>
+                </div>
+
+                <div className="w-8 h-px bg-[#2A2A2A] mb-5" />
+
+                <ul className="space-y-3 mb-7 flex-1">
+                  {plan.includes.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="w-3 h-px bg-[#CC0000] mt-[9px] shrink-0" />
+                      <span className="text-[#999] font-body text-sm leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <a
+                  href="https://calendly.com/amstudioai-info/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex items-center justify-center gap-2 py-3 px-5 font-mono-am text-[11px] tracking-widest uppercase transition-colors duration-200 ${
+                    plan.popular
+                      ? "bg-[#CC0000] text-white hover:bg-[#AA0000]"
+                      : "border border-[#2A2A2A] text-[#777] hover:border-[#444] hover:text-white"
+                  }`}
+                >
+                  Book a Call <ArrowRight size={11} />
+                </a>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-[#444] font-body text-xs mt-8 text-center leading-relaxed">
+            All prices in AUD · Custom quotes available for ongoing retainers and larger campaigns ·{" "}
+            <span className="text-[#666]">Contact us to discuss your project.</span>
+          </p>
+        </div>
+      </section>
+
       {/* Services List */}
       <section className="pb-16 md:pb-24">
         <div className="container">
@@ -263,82 +339,6 @@ export default function Services() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-16 md:py-24 bg-[#0D0D0D]">
-        <div className="container">
-          <div className="reveal mb-10 md:mb-14">
-            <div className="section-label mb-4">Investment</div>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white max-w-lg leading-tight">
-              Transparent pricing.
-              <br />
-              No surprises.
-            </h2>
-            <p className="text-[#888] font-body text-base md:text-lg mt-4 max-w-xl leading-relaxed">
-              Every project is scoped to your brief. These packages are our starting points.
-            </p>
-          </div>
-
-          <div className="reveal grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
-            {pricing.map((plan, i) => (
-              <div
-                key={plan.label}
-                className={`relative flex flex-col p-6 md:p-8 border ${
-                  plan.popular ? "border-[#CC0000]" : "border-[#1E1E1E]"
-                } bg-[#111111]`}
-                style={{ transitionDelay: `${i * 80}ms` }}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-px left-6 md:left-8">
-                    <span className="font-mono-am text-[10px] tracking-widest bg-[#CC0000] text-white px-3 py-1 uppercase">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-
-                <div className={`mb-5 ${plan.popular ? "pt-4" : "pt-1"}`}>
-                  <span className="font-mono-am text-[#CC0000] text-[10px] tracking-widest uppercase block mb-3">
-                    {plan.label}
-                  </span>
-                  <div className="font-display text-2xl md:text-3xl font-bold text-white mb-2">
-                    {plan.price}
-                  </div>
-                  <p className="text-[#555] font-body text-xs leading-relaxed">{plan.ideal}</p>
-                </div>
-
-                <div className="w-8 h-px bg-[#2A2A2A] mb-5" />
-
-                <ul className="space-y-3 mb-7 flex-1">
-                  {plan.includes.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <span className="w-3 h-px bg-[#CC0000] mt-[9px] shrink-0" />
-                      <span className="text-[#999] font-body text-sm leading-relaxed">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <a
-                  href="https://calendly.com/amstudioai-info/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`flex items-center justify-center gap-2 py-3 px-5 font-mono-am text-[11px] tracking-widest uppercase transition-colors duration-200 ${
-                    plan.popular
-                      ? "bg-[#CC0000] text-white hover:bg-[#AA0000]"
-                      : "border border-[#2A2A2A] text-[#777] hover:border-[#444] hover:text-white"
-                  }`}
-                >
-                  Book a Call <ArrowRight size={11} />
-                </a>
-              </div>
-            ))}
-          </div>
-
-          <p className="text-[#444] font-body text-xs mt-8 text-center leading-relaxed">
-            All prices in AUD · Custom quotes available for ongoing retainers and larger campaigns ·{" "}
-            <span className="text-[#666]">Contact us to discuss your project.</span>
-          </p>
         </div>
       </section>
 
