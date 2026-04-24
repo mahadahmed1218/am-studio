@@ -4,7 +4,7 @@
  * AM Studios · Services Page
  */
 import { useEffect, useRef } from "react";
-import { ArrowRight, Film, Cpu } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -21,40 +21,6 @@ function useReveal() {
   }, []);
   return ref;
 }
-
-const services = [
-  {
-    num: "01",
-    icon: <Film size={28} />,
-    title: "Cinematic Video Ads",
-    description:
-      "Film-quality video campaigns built for premium brands. We direct, produce, and deliver ads that look like they belong in a cinema · not a social feed. Every frame intentional. Every cut precise.",
-    features: [
-      "Full campaign concept & storyboard",
-      "Cinematic direction & AI production",
-      "Professional colour grading & sound design",
-      "Multi-format delivery (16:9, 9:16, 1:1)",
-      "48-hour turnaround",
-      "2 rounds of revisions included",
-    ],
-    industries: ["Luxury Automotive", "Fragrance", "Fashion", "Real Estate"],
-  },
-  {
-    num: "02",
-    icon: <Cpu size={28} />,
-    title: "AI Production",
-    description:
-      "We use advanced AI production tools to create premium video content that is indistinguishable from high-budget traditional production · delivered faster and at a fraction of the cost.",
-    features: [
-      "AI-assisted cinematic video generation",
-      "Photorealistic product visualisation",
-      "AI voiceover & professional sound design",
-      "Rapid iteration with same-day revisions",
-      "Scalable content production for ongoing campaigns",
-    ],
-    industries: ["Premium Brands", "E-Commerce", "Startups", "FMCG"],
-  },
-];
 
 const process = [
   {
@@ -257,70 +223,6 @@ export default function Services() {
             All prices in AUD · Custom quotes available for ongoing retainers and larger campaigns ·{" "}
             <span className="text-[#666]">Contact us to discuss your project.</span>
           </p>
-        </div>
-      </section>
-
-      {/* Services List */}
-      <section className="pb-16 md:pb-24">
-        <div className="container">
-          <div className="divide-y divide-[#E8E6E3]">
-            {services.map((service, i) => (
-              <div
-                key={service.num}
-                className="reveal py-9 lg:py-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8"
-                style={{ transitionDelay: `${Math.min(i * 60, 300)}ms` }}
-              >
-                {/* Number + Icon — desktop sidebar only */}
-                <div className="hidden lg:flex lg:col-span-1 lg:flex-col items-start gap-4">
-                  <span className="font-mono-am text-[#CCC] text-sm">{service.num}</span>
-                  <div className="text-[#CC0000]">{service.icon}</div>
-                </div>
-
-                {/* Title + Description */}
-                <div className="lg:col-span-5">
-                  {/* Mobile: icon + number in one clean row */}
-                  <div className="flex items-center gap-3 mb-4 lg:hidden">
-                    <div className="text-[#CC0000]">{service.icon}</div>
-                    <span className="font-mono-am text-[#CC0000] text-[10px] tracking-[0.2em] uppercase">
-                      {service.num}
-                    </span>
-                  </div>
-
-                  <h3 className="font-display text-xl md:text-2xl lg:text-3xl font-semibold text-[#111111] mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-[#555] font-body text-sm md:text-base leading-relaxed">
-                    {service.description}
-                  </p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {service.industries.map((ind) => (
-                      <span
-                        key={ind}
-                        className="font-mono-am text-[10px] text-[#888] border border-[#DDD] px-2 py-1 tracking-wider"
-                      >
-                        {ind}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Features — with mobile separator + label */}
-                <div className="lg:col-span-6 lg:pl-8 mt-1 pt-5 border-t border-[#EBEBEB] lg:border-0 lg:mt-0 lg:pt-0">
-                  <span className="font-mono-am text-[10px] text-[#AAA] tracking-widest uppercase block mb-4 lg:hidden">
-                    What&apos;s included
-                  </span>
-                  <ul className="space-y-3">
-                    {service.features.map((feat) => (
-                      <li key={feat} className="flex items-start gap-3">
-                        <span className="w-4 h-px bg-[#CC0000] mt-[9px] shrink-0" />
-                        <span className="text-[#444] font-body text-sm leading-relaxed">{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
