@@ -55,7 +55,7 @@ const socialStats = [
 const pricing = [
   {
     label: "STARTER",
-    price: "From $149 AUD",
+    price: "From $229 AUD",
     ideal: "Single product or brand launch content",
     popular: false,
     includes: [
@@ -67,7 +67,7 @@ const pricing = [
   },
   {
     label: "STANDARD",
-    price: "From $289 AUD",
+    price: "From $369 AUD",
     ideal: "Campaign-ready brands wanting multi-use content",
     popular: true,
     includes: [
@@ -80,7 +80,7 @@ const pricing = [
   },
   {
     label: "CAMPAIGN",
-    price: "From $499 AUD",
+    price: "From $579 AUD",
     ideal: "Brands running paid ads or launching a full campaign",
     popular: false,
     includes: [
